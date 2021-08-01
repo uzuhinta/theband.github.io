@@ -27,11 +27,6 @@ html {
   color: #fff;
 }
 
-.row {
-  margin-left: -8px;
-  margin-right: -8px;
-}
-
 /*  */
 
 #main {
@@ -143,7 +138,8 @@ ul#nav {
   position: relative;
   margin-top: 46.5px;
   padding-top: 50%;
-  background: url(https://uzuhinta.github.io/theband.github.io/asset/img/slider/banner1.jpg) center / cover no-repeat;
+  background: url(https://uzuhinta.github.io/theband.github.io/asset/img/slider/banner1.jpg)
+    center / cover no-repeat;
 }
 
 #slider .text-content {
@@ -171,11 +167,11 @@ ul#nav {
 }
 
 #content .content-section {
-  width: 768px;
-
+  width: 800px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 65px;
+  padding: 65px 16px 0;
 }
 
 #content .content-section .section-heading {
