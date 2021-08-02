@@ -40,11 +40,12 @@ html {
   height: 46.5px;
   background-color: #000;
   z-index: 1;
+  overflow: hidden;
 }
 
-#nav {
+/* #nav {
   display: inline-block;
-}
+} */
 
 #nav li {
   display: inline-block;
@@ -63,8 +64,8 @@ ul#nav {
   text-decoration: none;
   padding: 0 24px;
   display: inline-block;
-  *display: inline;
   transition: all 0.4s;
+  width: 100%;
 }
 
 #nav > li:last-child > a::after,
@@ -117,17 +118,27 @@ ul#nav {
   padding: 0 8px;
 }
 
+#header .mobile-menu-btn,
 #header .search-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
   padding: 0 20px 0 25px;
   float: right;
   transition: all 0.5s;
 }
 
+#header .mobile-menu-btn:hover,
 #header .search-btn:hover {
   cursor: pointer;
   background-color: #f44336;
 }
 
+#header .mobile-menu-btn {
+  display: none;
+}
+
+#header .menu-icon,
 #header .search-icon {
   color: #fff;
   font-size: 20px;
@@ -533,4 +544,22 @@ ul#nav {
   margin: 15px 0;
   line-height: 1.5;
   font-size: 15px;
+}
+
+@media (max-width: 740px) {
+  /* #header {
+    
+  } */
+  #nav li {
+    display: block;
+    background-color: #000;
+  }
+
+  #header .search-btn {
+    display: none;
+  }
+
+  #header .mobile-menu-btn {
+    display: block;
+  }
 }

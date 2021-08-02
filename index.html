@@ -44,6 +44,9 @@
         <div class="search-btn">
           <i class="ti-search search-icon"></i>
         </div>
+        <div class="mobile-menu-btn">
+          <i class="ti-menu menu-icon"></i>
+        </div>
       </div>
 
       <div id="slider">
@@ -261,6 +264,23 @@
       modal.addEventListener("click", showModal);
       modalContainer.addEventListener("click", function (event) {
         event.stopPropagation();
+      });
+
+      const menuBtn = document.querySelector(".mobile-menu-btn");
+      const header = document.querySelector("#header");
+      menuBtn.addEventListener("click", function () {
+        console.log(header.clientHeight);
+        if (header.clientHeight === 47) {
+          header.style.height = "auto";
+        } else {
+          header.style.height = "47px";
+        }
+      });
+      const anchorBtns = document.querySelectorAll("#nav li a");
+      anchorBtns.forEach(function (anchorBtn) {
+        anchorBtn.onclick = function () {
+          header.style.height = "47px";
+        };
       });
     </script>
   </body>
