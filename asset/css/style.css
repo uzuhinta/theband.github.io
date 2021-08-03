@@ -148,8 +148,7 @@ ul#nav {
   position: relative;
   margin-top: 46.5px;
   padding-top: 50%;
-  background: url(https://uzuhinta.github.io/theband.github.io/asset/img/slider/banner1.jpg)
-    center / cover no-repeat;
+  background: url("../img/slider/banner1.jpg") center / cover no-repeat;
 }
 
 #slider .text-content {
@@ -545,7 +544,7 @@ ul#nav {
   font-size: 15px;
 }
 
-@media (max-width: 740px) {
+@media (max-width: 46.1875em) {
   #header {
     overflow: hidden;
   }
