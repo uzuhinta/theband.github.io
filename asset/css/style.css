@@ -40,7 +40,6 @@ html {
   height: 46.5px;
   background-color: #000;
   z-index: 1;
-  overflow: hidden;
 }
 
 /* #nav {
@@ -517,7 +516,7 @@ ul#nav {
 
 .map-section img {
   width: 100%;
-  opacity: 0.7;
+  filter: brightness(0.6);
 }
 
 .map-section img::after {
@@ -547,12 +546,8 @@ ul#nav {
 }
 
 @media (max-width: 740px) {
-  /* #header {
-    
-  } */
-  #nav li {
-    display: block;
-    background-color: #000;
+  #header {
+    overflow: hidden;
   }
 
   #header .search-btn {
@@ -561,5 +556,60 @@ ul#nav {
 
   #header .mobile-menu-btn {
     display: block;
+  }
+  #nav > li {
+    display: block;
+    background-color: #000;
+  }
+
+  #nav > li:first-child {
+    display: inline-block;
+  }
+
+  #nav .subnav {
+    position: initial;
+  }
+
+  #nav .subnav a {
+    padding: 0 43px;
+  }
+
+  #content .member-item {
+    width: 100%;
+    margin: 20px 0px;
+  }
+
+  #content .member-item img {
+    width: 229px;
+  }
+
+  .tour-item {
+    width: 100%;
+  }
+
+  .tour-buy-btn {
+    width: 100%;
+  }
+
+  .col-full {
+    padding: 0 !important;
+  }
+
+  .contact {
+    margin: 0 0 60px 0;
+  }
+
+  .contact-form {
+    margin: 0;
+    padding: 0;
+  }
+
+  .contact-form input {
+    margin: 4px 0;
+  }
+
+  .contact-submit {
+    width: 100%;
+    margin-right: 0;
   }
 }

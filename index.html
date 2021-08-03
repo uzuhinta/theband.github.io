@@ -167,7 +167,7 @@
           <div class="section-heading">CONTACT</div>
           <div class="section-sub-heading">Fan? Drop a note!</div>
           <div class="contact">
-            <div class="col-half">
+            <div class="col-half col-full">
               <div class="contact-info">
                 <i class="ti-location-pin"></i> Chicago, US
               </div>
@@ -178,12 +178,12 @@
                 <i class="ti-email"></i> Email: mail@mail.com
               </div>
             </div>
-            <form class="col-half">
+            <form class="col-half col-full">
               <div class="contact-form">
-                <div class="col-half">
+                <div class="col-half col-full">
                   <input type="text" required placeholder="Name" />
                 </div>
-                <div class="col-half">
+                <div class="col-half col-full">
                   <input type="email" required placeholder="Email" />
                 </div>
               </div>
@@ -278,8 +278,18 @@
       });
       const anchorBtns = document.querySelectorAll("#nav li a");
       anchorBtns.forEach(function (anchorBtn) {
-        anchorBtn.onclick = function () {
-          header.style.height = "47px";
+        console.log();
+        anchorBtn.onclick = function (event) {
+          const isParentMenu =
+            this.nextElementSibling &&
+            this.nextElementSibling.classList.contains("subnav");
+          console.log(isParentMenu);
+          if (isParentMenu) {
+            event.preventDefault();
+            header.style.height = "auto";
+          } else {
+            header.style.height = "47px";
+          }
         };
       });
     </script>
